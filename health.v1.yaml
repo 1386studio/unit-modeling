@@ -1,0 +1,10 @@
+title: health
+type: object
+description: 生命体征信息，类型为士兵时
+properties:
+  temperature:
+    type: string
+  blood_pressure:
+    type: string
+  heart_beat:
+    type: string

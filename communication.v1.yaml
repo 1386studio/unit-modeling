@@ -1,0 +1,53 @@
+title: communication
+type: object
+description: 战斗单位通信
+properties:
+  mode:
+    type: string
+    description: 组网模式
+  bandwidth:
+    type: object
+    properties:
+      upstream_avg:
+        type: string
+      downstream_avg:
+        type: string
+      downstream_min:
+        type: string
+      upstream_min:
+        type: string
+      downstream_max:
+        type: string
+      upstream_max:
+        type: string
+  ip:
+    type: string
+  quality:
+    type: string
+    default: '5'
+    description: 链路质量
+    enum:
+      - '0'
+      - '1'
+      - '2'
+      - '3'
+  equipment:
+    type: string
+    description: 通信设备
+  battery:
+    type: string
+  ability:
+    type: object
+    properties:
+      im:
+        type:
+          - boolean
+          - string
+      live:
+        type:
+          - boolean
+          - string
+      ptt:
+        type:
+          - boolean
+          - string

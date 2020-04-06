@@ -1,0 +1,17 @@
+title: weapon
+type: array
+description: 携带武器列表
+items:
+  type: object
+  properties:
+    name:
+      type: string
+    type:
+      type: string
+    description:
+      type: string
+    count:
+      type: string
+    capacity:
+      type: string
+      description: 备弹量

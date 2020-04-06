@@ -1,0 +1,28 @@
+title: weather.v1
+type: object
+properties:
+  temperature:
+    type: string
+  pressure:
+    type: string
+  humidity:
+    type: string
+  precipitation:
+    type: string
+    description: 降水
+  solar_radiation:
+    type: string
+  wind_speed:
+    type: string
+  wind_direction:
+    type: string
+  type:
+    type: string
+    default: 晴朗
+    description: 天气类型
+    enum:
+      - 晴朗
+      - 下雨
+      - 大雾
+      - 多云
+description: 气象水文信息

@@ -1,0 +1,61 @@
+title: unit
+type: object
+x-tags:
+  - 单位
+x-examples: {}
+description: 战斗单位信息
+properties:
+  id:
+    type: string
+    description: UUID
+    format: uuid
+  name:
+    type: string
+  type:
+    type: string
+    default: 士兵
+    enum:
+      - 士兵
+      - 装甲车
+      - 无人机
+      - 坦克
+      - 直升机
+    example: 无人机
+  role:
+    type: string
+  mission:
+    type: string
+  location:
+    type: object
+    description: 单位坐标
+    properties:
+      latitude:
+        type: string
+      longitude:
+        type: string
+      elevation:
+        type: string
+  direction:
+    type: string
+    description: 运动方向
+  orientation:
+    type: string
+    description: 单位朝向
+  ground_speed:
+    type: string
+    description: 地面速度
+  acceleration:
+    type: string
+    description: 运动加速度
+  weather:
+    $ref: ./weather.v1.yaml
+  health:
+    $ref: ./health.v1.yaml
+  weapon:
+    $ref: ./weapon.v1.yaml
+  communication:
+    $ref: ./communication.v1.yaml
+required:
+  - id
+  - name
+  - type
